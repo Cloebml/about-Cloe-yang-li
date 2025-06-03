@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 | Portfolio - 李阳的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 星空背景 -->
+    <div class="stars"></div>
+
+    <!-- 图片全屏预览容器 -->
+    <div class="image-preview-modal" id="imagePreviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="zoom-controls">
+                    <button class="zoom-btn" id="zoomIn">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button class="zoom-btn" id="zoomOut">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="zoom-btn" id="resetZoom">
+                        <i class="fas fa-undo"></i>
+                    </button>
+                </div>
+                <button class="close-btn" id="closePreview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="image-container">
+                <img id="previewImage" src="" alt="Preview">
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-left">
+                <li>
+                    <a href="/Cloe-my-web/index.html">
+                        <span class="zh">首页</span>
+                        <span class="en">/ Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/about.html">
+                        <span class="zh">关于</span>
+                        <span class="en">/ About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/portfolio.html" class="active">
+                        <span class="zh">作品集</span>
+                        <span class="en">/ Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/more.html">
+                        <span class="zh">更多</span>
+                        <span class="en">/ More about me</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 作品集预览网格 -->
+        <div class="portfolio-grid-container">
+            <h1 class="portfolio-title">
+                <span class="zh">作品集</span>
+                <span class="en">/ Portfolio</span>
+            </h1>
+            
+            <div class="portfolio-grid">
+                <!-- 和乐怡项目 -->
+                <div class="portfolio-item" data-project="horoyoi">
+                    <div class="portfolio-item-content">
+                        <div class="project-emoji">🍸</div>
+                        <h2>
+                            <span class="zh">和乐怡品牌传播策划案</span>
+                            <span class="en">Horoyoi Brand Campaign</span>
+                        </h2>
+                        <p class="project-brief">
+                            <span class="zh">奥美广告实习项目</span>
+                            <span class="en">Ogilvy Internship Project</span>
+                        </p>
+                        <div class="project-tags">
+                            <span>品牌策划</span>
+                            <span>整合营销</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-overlay">
+                        <button class="view-project-btn">
+                            <span class="zh">查看项目</span>
+                            <span class="en">View Project</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 翻译项目 -->
+                <div class="portfolio-item" data-project="translation">
+                    <div class="portfolio-item-content">
+                        <div class="project-emoji">📘</div>
+                        <h2>
+                            <span class="zh">《Home Making》文学翻译项目</span>
+                            <span class="en">Literary Translation Project</span>
+                        </h2>
+                        <p class="project-brief">
+                            <span class="zh">Corella Press 出版</span>
+                            <span class="en">Published by Corella Press</span>
+                        </p>
+                        <div class="project-tags">
+                            <span>文学翻译</span>
+                            <span>项目统筹</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-overlay">
+                        <button class="view-project-btn">
+                            <span class="zh">查看项目</span>
+                            <span class="en">View Project</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Creamy Cattery项目 -->
+                <div class="portfolio-item" data-project="neobike">
+                    <div class="portfolio-item-content">
+                        <div class="project-emoji">🚲</div>
+                        <h2>
+                            <span class="zh">NeoBike 战略模拟项目</span>
+                            <span class="en">NeoBike Strategic Simulation</span>
+                        </h2>
+                        <p class="project-brief">
+                            <span class="zh">哈佛/墨尔本大学联合商业模拟</span>
+                            <span class="en">Harvard-Melbourne Business Simulation</span>
+                        </p>
+                        <div class="project-tags">
+                            <span>品牌战略</span>
+                            <span>数据营销</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-overlay">
+                        <button class="view-project-btn">
+                            <span class="zh">查看项目</span>
+                            <span class="en">View Project</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Creamy Cattery项目 -->
+                <div class="portfolio-item" data-project="cattery">
+                    <div class="portfolio-item-content">
+                        <div class="project-emoji">🐾</div>
+                        <h2>
+                            <span class="zh">Creamy Cattery 宠物品牌创业</span>
+                            <span class="en">Pet Brand Startup</span>
+                        </h2>
+                        <p class="project-brief">
+                            <span class="zh">创始人 & 品牌运营</span>
+                            <span class="en">Founder & Brand Operator</span>
+                        </p>
+                        <div class="project-tags">
+                            <span>品牌创业</span>
+                            <span>服务设计</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-overlay">
+                        <button class="view-project-btn">
+                            <span class="zh">查看项目</span>
+                            <span class="en">View Project</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 其他项目占位 -->
+                <div class="portfolio-item coming-soon">
+                    <div class="portfolio-item-content">
+                        <div class="project-emoji">✨</div>
+                        <h2>
+                            <span class="zh">更多项目</span>
+                            <span class="en">More Coming</span>
+                        </h2>
+                        <p class="project-brief">
+                            <span class="zh">敬请期待</span>
+                            <span class="en">Stay Tuned</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目详情容器 -->
+        <div class="project-details-container" id="projectDetails">
+            <!-- 返回按钮 -->
+            <button class="back-to-grid" id="backButton">
+                <i class="fas fa-arrow-left"></i>
+                <span class="zh">返回作品集</span>
+                <span class="en">Back to Portfolio</span>
+            </button>
+
+            <!-- 和乐怡项目详情 -->
+            <div class="project-details" id="horoyoiDetails">
+                <!-- 樱花背景 -->
+                <div class="sakura-bg"></div>
+
+                <div class="container portfolio-container">
+                    <div class="portfolio-content">
+                        <!-- 项目标题区域 -->
+                        <div class="project-header">
+                            <div class="project-emoji-container">
+                                <div class="project-emoji">🍸</div>
+                                <div class="emoji-shadow"></div>
+                            </div>
+                            <h1 class="project-title">
+                                <div class="title-block">
+                                    <span class="zh">和乐怡品牌传播策划案</span>
+                                    <span class="en">Horoyoi Brand Campaign</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-building"></i>
+                                        <span class="zh">奥美广告</span>
+                                        <span class="en">Ogilvy</span>
+                                    </span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        <span class="zh">2023年春</span>
+                                        <span class="en">Spring 2023</span>
+                                    </span>
+                                </div>
+                            </h1>
+                        </div>
+
+                        <!-- 项目概览 -->
+                        <div class="project-overview">
+                            <div class="overview-image">
+                                <img src="horoyoi_case.png" alt="Horoyoi Brand Campaign" class="featured-image" onclick="openImagePreview(this.src)">
+                                <div class="image-overlay">
+                                    <div class="image-caption">
+                                        <span class="zh">和乐怡品牌视觉呈现</span>
+                                        <span class="en">Horoyoi Brand Visual</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">目标用户</span>
+                                        <span class="en">Target</span>
+                                        <div class="stat-value">年轻女性群体</div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">市场定位</span>
+                                        <span class="en">Position</span>
+                                        <div class="stat-value">低度酒新选择</div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">品牌主张</span>
+                                        <span class="en">Value</span>
+                                        <div class="stat-value">怡式生活</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 项目背景 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目背景</span>
+                                    <span class="en">/ Background</span>
+                                </div>
+                            </h2>
+                            <div class="content-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">面对中国低度酒"悦己消费"风口，Horoyoi（和乐怡）希望在年轻女性群体中强化品牌认知，重塑"闺蜜小聚专属饮品"的场景定位。品牌亟需通过节日节点活动与线上互动机制，打造差异化的情绪连接与参与感。</p>
+                                    <p class="en">In the context of China's booming low-alcohol "self-pleasure" market, Horoyoi aimed to reinforce its position as the drink of choice for female bonding occasions. The brand sought seasonal campaigns and interactive engagement to strengthen emotional relevance.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 项目目标 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目目标</span>
+                                    <span class="en">/ Objectives</span>
+                                </div>
+                            </h2>
+                            <div class="objectives-grid">
+                                <div class="objective-card">
+                                    <div class="objective-icon">🎯</div>
+                                    <div class="objective-content">
+                                        <p class="zh">突出"姐妹小聚的专属果酒"场景定位</p>
+                                        <p class="en">Establish Horoyoi as the go-to drink for intimate female gatherings</p>
+                                    </div>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">💫</div>
+                                    <div class="objective-content">
+                                        <p class="zh">提升品牌的情绪记忆与节日参与度</p>
+                                        <p class="en">Enhance seasonal brand memory and participation</p>
+                                    </div>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">✨</div>
+                                    <div class="objective-content">
+                                        <p class="zh">打造全年可延续的"怡式感"品牌体系</p>
+                                        <p class="en">Build a year-round thematic experience of "Yishi-style"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 我的贡献 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-star"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">我的贡献</span>
+                                    <span class="en">/ My Role</span>
+                                </div>
+                            </h2>
+                            
+                            <div class="contribution-timeline">
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-search"></i>
+                                        <span class="zh">品牌洞察与分析</span>
+                                        <span class="en">/ Consumer Insight</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">分析"颜值经济""悦己消费"等趋势与社交行为</span>
+                                            <span class="en">Analysis of "appearance economy" and "self-pleasure consumption" trends</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">梳理品牌与竞品在"独饮 vs 聚饮"场景的差异</span>
+                                            <span class="en">Mapping brand differentiation in solo vs. social drinking scenarios</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">确立"怡式感"（精致、情绪、分享）的品牌主张</span>
+                                            <span class="en">Establishing the "Yishi-style" brand proposition</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-paint-brush"></i>
+                                        <span class="zh">创意协助与内容支持</span>
+                                        <span class="en">/ Creative & Content Contribution</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">参与构思全年节日节点活动（如樱花野餐、美甲派样、温泉联名）</span>
+                                            <span class="en">Co-creating seasonal campaign concepts</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">起草部分传播文案、活动机制逻辑与话术建议</span>
+                                            <span class="en">Drafting campaign copy and engagement mechanics</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">参与用户传播路径及社群组团机制的策划</span>
+                                            <span class="en">Planning user journey and community engagement</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-cogs"></i>
+                                        <span class="zh">传播机制与用户参与设计</span>
+                                        <span class="en">/ Mechanism Design</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">协助设计"3罐成团，赢春日野餐体验"组队机制</span>
+                                            <span class="en">Designing group purchase mechanics</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">参与 AR 扫码互动、美甲贴纸派样、社交转发流程设计</span>
+                                            <span class="en">Developing AR interaction and social sharing process</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">结合抖音、小红书平台传播节奏，提升转发率与用户UGC参与度</span>
+                                            <span class="en">Optimizing UGC engagement across social platforms</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 展示说明 -->
+                        <section class="project-section note-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">展示说明</span>
+                                    <span class="en">/ Display Note</span>
+                                </div>
+                            </h2>
+                            <div class="note-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">该项目属于奥美广告公司服务客户的内部提案，部分视觉内容与客户素材受保密协议限制，无法对外展示。当前仅保留策划结构与内容说明，相关资料可于面试中线下展示。</p>
+                                    <p class="en">Due to NDA restrictions as part of Ogilvy's internal proposal, visual assets and proprietary materials are not publicly available. Structural overviews and contribution summaries are shown; full content may be presented privately.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 关键词 -->
+                        <section class="project-section skills-section">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-tags"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">关键词</span>
+                                    <span class="en">/ Highlighted Skills</span>
+                                </div>
+                            </h2>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fas fa-bullseye"></i> 品牌定位 Brand Positioning</span>
+                                <span class="skill-tag"><i class="fas fa-lightbulb"></i> 消费者洞察 Consumer Insight</span>
+                                <span class="skill-tag"><i class="fas fa-calendar-alt"></i> 节点营销 Seasonal Marketing</span>
+                                <span class="skill-tag"><i class="fas fa-users"></i> 社交机制设计 Social Activation</span>
+                                <span class="skill-tag"><i class="fas fa-paint-brush"></i> 内容协作 Creative Collaboration</span>
+                                <span class="skill-tag"><i class="fas fa-chart-network"></i> 整合传播 Integrated Campaign</span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 翻译项目详情 -->
+            <div class="project-details" id="translationDetails">
+                <div class="container portfolio-container">
+                    <div class="portfolio-content">
+                        <!-- 项目标题区域 -->
+                        <div class="project-header">
+                            <div class="project-emoji-container">
+                                <div class="project-emoji">📘</div>
+                                <div class="emoji-shadow"></div>
+                            </div>
+                            <h1 class="project-title">
+                                <div class="title-block">
+                                    <span class="zh">《Home Making》文学翻译项目</span>
+                                    <span class="en">Literary Translation Project</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-book-open"></i>
+                                        <span class="zh">Corella Press</span>
+                                        <span class="en">Corella Press</span>
+                                    </span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>2022</span>
+                                    </span>
+                                </div>
+                            </h1>
+                        </div>
+
+                        <!-- 项目概览 -->
+                        <div class="project-overview">
+                            <div class="overview-image">
+                                <img src="translate.jpg" alt="Translation Project" class="featured-image" onclick="openImagePreview(this.src)">
+                                <div class="image-overlay">
+                                    <div class="image-caption">
+                                        <span class="zh">翻译团队合作过程</span>
+                                        <span class="en">Translation Team Collaboration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">团队规模</span>
+                                        <span class="en">Team Size</span>
+                                        <div class="stat-value">8人翻译团队</div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-book"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">项目类型</span>
+                                        <span class="en">Project Type</span>
+                                        <div class="stat-value">文学翻译</div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">语言方向</span>
+                                        <span class="en">Language Pair</span>
+                                        <div class="stat-value">中译英</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 项目背景 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目背景</span>
+                                    <span class="en">/ Background</span>
+                                </div>
+                            </h2>
+                            <div class="content-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">该项目由澳大利亚非营利出版社 Corella Press 主导，旨在将华语文学作品引介至英语文化语境。所选作品《Home Making》聚焦移民家庭的日常生活与文化适应，情感表达细腻，语言节奏复杂，对翻译提出较高要求。</p>
+                                    <p class="en">Led by Corella Press, this project aimed to bring Chinese-language literary works into the English-speaking world. Home Making explores the emotional nuances of immigrant family life, making it a translation-intensive and culturally layered text.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 项目任务 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-tasks"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目任务</span>
+                                    <span class="en">/ Task Description</span>
+                                </div>
+                            </h2>
+                            <div class="content-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">我担任中译英翻译负责人，带领小组完成翻译、统筹与校审工作。该译文现已正式出版，并被澳大利亚文学数据库 AustLit 收录。</p>
+                                    <p class="en">As lead translator, I coordinated the full translation, editing, and localization of the short story into English. The final work has been published by Corella Press and archived in AustLit.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 我的贡献 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-star"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">我的贡献</span>
+                                    <span class="en">/ My Role</span>
+                                </div>
+                            </h2>
+                            
+                            <div class="contribution-timeline">
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-pen"></i>
+                                        <span class="zh">翻译统筹与语言风格把控</span>
+                                        <span class="en">/ Translation Management</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">统筹进度与任务分配，确保按期交稿</span>
+                                            <span class="en">Coordinated progress and task allocation</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">校审译文风格统一性，保持原文叙事情感与节奏</span>
+                                            <span class="en">Maintained stylistic consistency and narrative rhythm</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">调整繁体/港澳语境中的表达方式，优化译文自然度</span>
+                                            <span class="en">Optimized expressions for natural flow</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-globe-asia"></i>
+                                        <span class="zh">跨文化表达与传播适配</span>
+                                        <span class="en">/ Cultural Adaptation</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">对移民家庭文化与情感背景进行延伸研究</span>
+                                            <span class="en">Conducted research on immigrant family dynamics</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">采用更地道的英文表达传递华语文化特有语感</span>
+                                            <span class="en">Conveyed Chinese cultural nuances in idiomatic English</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">提供脚注与背景说明，帮助英文读者理解语境</span>
+                                            <span class="en">Added contextual notes for English readers</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 展示说明 -->
+                        <section class="project-section note-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">展示说明</span>
+                                    <span class="en">/ Display Note</span>
+                                </div>
+                            </h2>
+                            <div class="note-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">该项目已正式出版，详情可通过以下链接访问官方出版页面。如需节选翻译样稿，可在面试或私下交流中展示。</p>
+                                    <p class="en">This project has been officially published. For access to the publication page, see link below. Sample translated excerpts can be provided during private sessions.</p>
+                                </div>
+                                <div class="project-link">
+                                    <a href="https://www.austlit.edu.au/austlit/page/25649983" target="_blank" class="external-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>AustLit Publication Page</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 关键词 -->
+                        <section class="project-section skills-section">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-tags"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">关键词</span>
+                                    <span class="en">/ Highlighted Skills</span>
+                                </div>
+                            </h2>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fas fa-language"></i> 文学翻译 Literary Translation</span>
+                                <span class="skill-tag"><i class="fas fa-edit"></i> 语言风格控制 Stylistic Editing</span>
+                                <span class="skill-tag"><i class="fas fa-globe"></i> 文化适配 Cultural Localization</span>
+                                <span class="skill-tag"><i class="fas fa-tasks"></i> 项目统筹 Project Coordination</span>
+                                <span class="skill-tag"><i class="fas fa-comments"></i> 跨文化传播 Intercultural Communication</span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creamy Cattery项目详情 -->
+            <div class="project-details" id="neobikeDetails">
+                <div class="container portfolio-container">
+                    <div class="portfolio-content">
+                        <!-- 项目标题区域 -->
+                        <div class="project-header">
+                            <div class="project-emoji-container">
+                                <div class="project-emoji">🚲</div>
+                                <div class="emoji-shadow"></div>
+                            </div>
+                            <h1 class="project-title">
+                                <div class="title-block">
+                                    <span class="zh">NeoBike 战略模拟项目</span>
+                                    <span class="en">NeoBike Strategic Simulation</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-university"></i>
+                                        <span class="zh">哈佛商学院案例模拟</span>
+                                        <span class="en">Harvard Business Simulation</span>
+                                    </span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-user-tie"></i>
+                                        <span>VP – Brand Manager</span>
+                                    </span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>2025</span>
+                                    </span>
+                                </div>
+                            </h1>
+                        </div>
+
+                        <!-- 项目概览 -->
+                        <div class="project-overview">
+                            <!-- 图片展示区 -->
+                            <div class="project-gallery">
+                                <div class="gallery-grid">
+                                    <div class="gallery-item">
+                                        <img src="certification.jpg" alt="Project Certification" onclick="openImagePreview(this.src)">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Harvardedu.jpg" alt="Harvard Business Publishing Education" onclick="openImagePreview(this.src)">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="performance overview.jpg" alt="Performance Overview" onclick="openImagePreview(this.src)">
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="neobike.jpg" alt="NeoBike Product" onclick="openImagePreview(this.src)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <style>
+                                .project-gallery {
+                                    margin: 2rem 0;
+                                    padding: 0 2rem;
+                                }
+
+                                .gallery-grid {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    gap: 2rem;
+                                    max-width: 1200px;
+                                    margin: 0 auto;
+                                }
+
+                                .gallery-item {
+                                    aspect-ratio: 4/3;
+                                    border-radius: 12px;
+                                    overflow: hidden;
+                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                                    background: #fff;
+                                    transition: transform 0.3s ease;
+                                }
+
+                                .gallery-item:hover {
+                                    transform: translateY(-5px);
+                                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+                                }
+
+                                .gallery-item img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                    background: #fff;
+                                    padding: 1rem;
+                                    cursor: pointer;
+                                }
+
+                                @media (max-width: 768px) {
+                                    .gallery-grid {
+                                        grid-template-columns: 1fr;
+                                        gap: 1.5rem;
+                                    }
+
+                                    .project-gallery {
+                                        padding: 0 1rem;
+                                    }
+                                }
+
+                                /* 图片预览模态框样式优化 */
+                                .image-preview-modal .image-container {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: calc(100vh - 60px);
+                                    padding: 2rem;
+                                }
+
+                                .image-preview-modal .image-container img {
+                                    max-width: 90%;
+                                    max-height: 90vh;
+                                    object-fit: contain;
+                                    background: #fff;
+                                    border-radius: 8px;
+                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                                }
+                            </style>
+
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">品牌分数</span>
+                                        <span class="en">Brand Score</span>
+                                        <div class="stat-value">APAC 93 | LATAM 94</div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-bicycle"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">销量成果</span>
+                                        <span class="en">Sales Volume</span>
+                                        <div class="stat-value">2,198 台</div>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-percentage"></i></div>
+                                    <div class="stat-text">
+                                        <span class="zh">成本优化</span>
+                                        <span class="en">Cost Reduction</span>
+                                        <div class="stat-value">-21.5%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 项目背景 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目背景</span>
+                                    <span class="en">/ Background</span>
+                                </div>
+                            </h2>
+                            <div class="content-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">NeoBike 是一场由哈佛商学院案例系统设计的商业模拟，由我们团队代表公司董事会向高管层进行季度提案与资源配置。该项目模拟真实企业在不同生命周期中的战略抉择，从市场进入、品牌管理到渠道策略全流程实践。</p>
+                                    <p class="en">NeoBike was a strategic simulation modeled on Harvard Business School's interactive case system. Acting as VP – Brand Manager, I led brand positioning, digital media strategy, and pricing coordination throughout multiple decision rounds.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 项目目标 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目目标</span>
+                                    <span class="en">/ Objectives</span>
+                                </div>
+                            </h2>
+                            <div class="objectives-grid">
+                                <div class="objective-card">
+                                    <div class="objective-icon">🎯</div>
+                                    <div class="objective-content">
+                                        <p class="zh">在"工作+休闲"两个高潜市场中构建品牌领导地位</p>
+                                        <p class="en">Achieve leadership in both Work & Recreation segments</p>
+                                    </div>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">💰</div>
+                                    <div class="objective-content">
+                                        <p class="zh">在低成本压力下维持品牌形象与利润平衡</p>
+                                        <p class="en">Balance pricing power and profitability under cost pressure</p>
+                                    </div>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">📈</div>
+                                    <div class="objective-content">
+                                        <p class="zh">优化销售渠道与定价策略，实现可持续增长</p>
+                                        <p class="en">Scale sales channels and integrate a coherent brand experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 我的贡献 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-star"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">我的贡献</span>
+                                    <span class="en">/ My Role</span>
+                                </div>
+                            </h2>
+                            
+                            <div class="contribution-timeline">
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-bullhorn"></i>
+                                        <span class="zh">品牌定位与广告策略</span>
+                                        <span class="en">/ Brand & Advertising Strategy</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">基于深度消费者调研，确定主打场景为"城市通勤+轻运动"</span>
+                                            <span class="en">Identified key scenarios: urban commuting & light recreation</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">撰写广告文案主张"From City Streets to Mountain Peaks"</span>
+                                            <span class="en">Created "From City Streets to Mountain Peaks" campaign</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">带领团队实现品牌认知度在全球三大区域保持第一</span>
+                                            <span class="en">Achieved #1 brand awareness across three global regions</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-chart-line"></i>
+                                        <span class="zh">定价策略与品牌价值维系</span>
+                                        <span class="en">/ Pricing & Value Management</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">拒绝单纯成本导向定价，主张"竞争+价值导向混合定价"</span>
+                                            <span class="en">Implemented hybrid pricing strategy beyond cost-based approach</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">实现定价动态调整：初期高价建立价值感，后期配合$100 rebate提高转化</span>
+                                            <span class="en">Executed dynamic pricing with strategic rebate program</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">与团队协作优化毛利结构，实现单位成本下降21.5%</span>
+                                            <span class="en">Achieved 21.5% unit cost reduction through optimization</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span class="zh">战略调整与风险应对</span>
+                                        <span class="en">/ Strategic Adjustment</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">及时识别"过度折扣可能削弱品牌溢价"的风险</span>
+                                            <span class="en">Identified risks in excessive discounting strategy</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">制定后期"削减 rebate、回归产品价值"的策略建议</span>
+                                            <span class="en">Developed strategy to reduce rebates and restore value</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">结合 BCG 模型提出产品线上下游拓展方案</span>
+                                            <span class="en">Proposed product line expansion using BCG matrix</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 项目成果 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-trophy"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目成果</span>
+                                    <span class="en">/ Key Outcomes</span>
+                                </div>
+                            </h2>
+                            <div class="content-card">
+                                <div class="outcomes-grid">
+                                    <div class="outcome-item">
+                                        <i class="fas fa-star"></i>
+                                        <p>
+                                            <span class="zh">品牌分数在 Q8 达到全区域第一（Work: APAC 93，Recreation: LATAM-MEA 94）</span>
+                                            <span class="en">Achieved #1 brand score across regions in Q8</span>
+                                        </p>
+                                    </div>
+                                    <div class="outcome-item">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <p>
+                                            <span class="zh">销量跃升至领先地位（单品销量达 2,198 台）</span>
+                                            <span class="en">Reached leading sales position with 2,198 units</span>
+                                        </p>
+                                    </div>
+                                    <div class="outcome-item">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <p>
+                                            <span class="zh">促成公司从差异化策略向"成本领先+价值混合"成功转型</span>
+                                            <span class="en">Successfully transformed strategy to cost leadership + value hybrid</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 展示说明 -->
+                        <section class="project-section note-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">展示说明</span>
+                                    <span class="en">/ Display Note</span>
+                                </div>
+                            </h2>
+                            <div class="note-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">所有展示内容均为模拟数据和原创提案，素材可公开展示。可附上品牌视觉、产品生命周期图、BCG 分析图、品牌成长轨迹与最终成果截图。</p>
+                                    <p class="en">All content is part of an academic business simulation and can be displayed publicly. Supporting visuals including brand score trajectories, channel strategy maps, and pricing matrices are available on request.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 关键词 -->
+                        <section class="project-section skills-section">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-tags"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">关键词</span>
+                                    <span class="en">/ Highlighted Skills</span>
+                                </div>
+                            </h2>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fas fa-bullseye"></i> 品牌战略 Brand Strategy</span>
+                                <span class="skill-tag"><i class="fas fa-calculator"></i> 定价模型 Hybrid Pricing</span>
+                                <span class="skill-tag"><i class="fas fa-chart-pie"></i> 数据驱动营销 Data-led Promotion</span>
+                                <span class="skill-tag"><i class="fas fa-chess"></i> 模拟决策 Simulation Decision-making</span>
+                                <span class="skill-tag"><i class="fas fa-users"></i> 跨职能协作 Cross-functional Collaboration</span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creamy Cattery项目详情 -->
+            <div class="project-details" id="catteryDetails">
+                <div class="container portfolio-container">
+                    <div class="portfolio-content">
+                        <!-- 项目标题区域 -->
+                        <div class="project-header">
+                            <div class="project-emoji-container">
+                                <div class="project-emoji">🐾</div>
+                                <div class="emoji-shadow"></div>
+                            </div>
+                            <h1 class="project-title">
+                                <div class="title-block">
+                                    <span class="zh">Creamy Cattery 宠物品牌创业项目</span>
+                                    <span class="en">Pet Brand Startup Project</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span class="meta-item">
+                                        <i class="fas fa-user-tie"></i>
+                                        <span class="zh">创始人</span>
+                                        <span class="en">Founder</span>
+                                    </span>
+                                    <span class="meta-divider">|</span>
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>2019-2022</span>
+                                    </span>
+                                </div>
+                            </h1>
+                        </div>
+
+                        <!-- 项目概览图片组 -->
+                        <div class="project-overview">
+                            <div class="image-grid">
+                                <div class="image-section">
+                                    <h3 class="section-subtitle">
+                                        <span class="zh">专业宠物照护服务</span>
+                                        <span class="en">Professional Pet Care Services</span>
+                                    </h3>
+                                    <div class="image-row">
+                                        <div class="overview-image">
+                                            <img src="pettransport.jpg" alt="Pet Transport Service" class="featured-image" onclick="openImagePreview(this.src)">
+                                            <div class="image-overlay">
+                                                <div class="image-caption">
+                                                    <span class="zh">专业的跨州宠物运输</span>
+                                                    <span class="en">Interstate Pet Transport</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-section">
+                                    <h3 class="section-subtitle">
+                                        <span class="zh">社群运营与用户互动</span>
+                                        <span class="en">Community Management</span>
+                                    </h3>
+                                    <div class="image-row">
+                                        <div class="overview-image">
+                                            <img src="screenshotfor WeChatcontent.jpg" alt="Social Media Content" class="featured-image" onclick="openImagePreview(this.src)">
+                                            <div class="image-overlay">
+                                                <div class="image-caption">
+                                                    <span class="zh">微信社群活动与互动</span>
+                                                    <span class="en">WeChat Community Engagement</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 快速统计 -->
+                        <div class="quick-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                                <div class="stat-text">
+                                    <span class="zh">服务用户</span>
+                                    <span class="en">Users Served</span>
+                                    <div class="stat-value">200+ 家庭</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon"><i class="fas fa-paw"></i></div>
+                                <div class="stat-text">
+                                    <span class="zh">布偶猫</span>
+                                    <span class="en">Ragdolls</span>
+                                    <div class="stat-value">优质繁育</div>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+                                <div class="stat-text">
+                                    <span class="zh">服务范围</span>
+                                    <span class="en">Coverage</span>
+                                    <div class="stat-value">全澳运输</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 项目背景 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目背景</span>
+                                    <span class="en">/ Background</span>
+                                </div>
+                            </h2>
+                            <div class="content-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">疫情期间，大量中国留学生被迫长期滞留澳洲，情绪焦虑、孤独感上升。我洞察到这一群体对"有生命陪伴"的真实需求，于是创立 Creamy Cattery ——一个专为留学生群体服务的布偶猫品牌，提供从领养、照护到售后的一体化支持服务。</p>
+                                    <p class="en">During the pandemic, many Chinese international students were stranded in Australia, facing isolation and emotional stress. I identified a strong unmet need for companionship and founded Creamy Cattery to provide reliable, affordable, and emotionally supportive pet ownership experiences.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 项目目标 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-bullseye"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">项目目标</span>
+                                    <span class="en">/ Objectives</span>
+                                </div>
+                            </h2>
+                            <div class="objectives-grid">
+                                <div class="objective-card">
+                                    <div class="objective-icon">🤝</div>
+                                    <div class="objective-content">
+                                        <p class="zh">响应疫情下的情感陪伴需求</p>
+                                        <p class="en">Respond to emotional needs during COVID</p>
+                                    </div>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">💰</div>
+                                    <div class="objective-content">
+                                        <p class="zh">提供经济、信赖、有保障的布偶猫领养选择</p>
+                                        <p class="en">Offer safe and affordable adoption options</p>
+                                    </div>
+                                </div>
+                                <div class="objective-card">
+                                    <div class="objective-icon">📈</div>
+                                    <div class="objective-content">
+                                        <p class="zh">通过服务链路拓展实现资金正循环</p>
+                                        <p class="en">Build self-sustaining cash flow</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 我的贡献 -->
+                        <section class="project-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-star"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">我的贡献</span>
+                                    <span class="en">/ My Role</span>
+                                </div>
+                            </h2>
+                            
+                            <div class="contribution-timeline">
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-search"></i>
+                                        <span class="zh">疫情下的用户洞察</span>
+                                        <span class="en">/ User Insight</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">分析留学生论坛、微信群、豆瓣等平台情绪走向</span>
+                                            <span class="en">Analyzed student forums and social media sentiment</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">访谈潜在用户了解陪伴型宠物需求与顾虑</span>
+                                            <span class="en">Conducted user interviews about pet companionship needs</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">明确布偶猫"高颜值+性格温顺"的核心价值点</span>
+                                            <span class="en">Identified core value proposition of Ragdolls</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-tools"></i>
+                                        <span class="zh">服务产品设计与资源整合</span>
+                                        <span class="en">/ Service Design</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">开发"一猫一档"成长记录服务，增强客户信任感</span>
+                                            <span class="en">Developed individual pet growth tracking system</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">制定疫苗接种、绝育、芯片植入等配套服务流程</span>
+                                            <span class="en">Established comprehensive pet care procedures</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">拓展猫舍周边服务（如宠物接送、跨州运输）</span>
+                                            <span class="en">Expanded to pet transport and related services</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span class="zh">盈利机制探索</span>
+                                        <span class="en">/ Business Model</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">通过线下服务获得现金流：接送宠物、跨州运输</span>
+                                            <span class="en">Generated cash flow through offline services</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">与兽医、运输商协作，提供宠物跨州运输服务</span>
+                                            <span class="en">Partnered with vets and transport providers</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">逐步将服务模式标准化并可复用于猫舍客户</span>
+                                            <span class="en">Standardized service model for scalability</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="contribution-block">
+                                    <div class="timeline-dot"></div>
+                                    <h3>
+                                        <i class="fas fa-bullhorn"></i>
+                                        <span class="zh">用户增长与传播</span>
+                                        <span class="en">/ Growth Strategy</span>
+                                    </h3>
+                                    <ul class="contribution-list">
+                                        <li>
+                                            <span class="zh">利用真实领养故事+照片，在小红书/朋友圈展开私域种草</span>
+                                            <span class="en">Leveraged authentic adoption stories for marketing</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">搭建微信用户社群，持续提供照护建议，提升粘性</span>
+                                            <span class="en">Built WeChat community for ongoing engagement</span>
+                                        </li>
+                                        <li>
+                                            <span class="zh">完善售后回访与"陪伴反馈"机制，提高转介绍率</span>
+                                            <span class="en">Enhanced follow-up system for referrals</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 展示说明 -->
+                        <section class="project-section note-section with-gradient">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-info-circle"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">展示说明</span>
+                                    <span class="en">/ Display Note</span>
+                                </div>
+                            </h2>
+                            <div class="note-card">
+                                <div class="bilingual-text">
+                                    <p class="zh">该项目由本人全程独立策划与执行，可提供服务流程图、宠物成长记录样本、用户反馈截图与早期经营财务简表用于展示。</p>
+                                    <p class="en">This is an independently founded and operated venture. Supporting materials—such as service flowcharts, pet diaries, customer testimonials, and early-stage financial summaries—are available for portfolio display.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 关键词 -->
+                        <section class="project-section skills-section">
+                            <h2>
+                                <div class="section-icon"><i class="fas fa-tags"></i></div>
+                                <div class="section-title">
+                                    <span class="zh">关键词</span>
+                                    <span class="en">/ Highlighted Skills</span>
+                                </div>
+                            </h2>
+                            <div class="skills-list">
+                                <span class="skill-tag"><i class="fas fa-eye"></i> 疫情洞察 Crisis Insight</span>
+                                <span class="skill-tag"><i class="fas fa-paw"></i> 宠物市场切入 Pet Sector Entry</span>
+                                <span class="skill-tag"><i class="fas fa-cogs"></i> 服务产品化 Service Innovation</span>
+                                <span class="skill-tag"><i class="fas fa-money-bill-wave"></i> 资金链自建 Cash Flow Bootstrapping</span>
+                                <span class="skill-tag"><i class="fas fa-users"></i> 客户增长与社群维护 Customer Community</span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // 创建星空背景
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            const numberOfStars = 100;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 2 + 1;
+                const duration = Math.random() * 4 + 2;
+                
+                star.style.cssText = `
+                    left: ${x}%;
+                    top: ${y}%;
+                    width: ${size}px;
+                    height: ${size}px;
+                    --duration: ${duration}s;
+                `;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // 创建樱花背景
+        function createSakura() {
+            const sakuraBg = document.querySelector('.sakura-bg');
+            const numberOfPetals = 30;
+
+            for (let i = 0; i < numberOfPetals; i++) {
+                const petal = document.createElement('div');
+                petal.className = 'sakura';
+                
+                // 随机大小
+                const size = Math.random() * 15 + 5;
+                // 随机位置
+                const left = Math.random() * 100;
+                // 随机动画时长
+                const duration = Math.random() * 10 + 8;
+                // 随机延迟
+                const delay = Math.random() * 5;
+                
+                petal.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${left}%;
+                    animation-duration: ${duration}s;
+                    animation-delay: -${delay}s;
+                `;
+                
+                sakuraBg.appendChild(petal);
+            }
+        }
+
+        // 项目切换逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const gridContainer = document.querySelector('.portfolio-grid-container');
+            const projectDetails = document.getElementById('projectDetails');
+            const backButton = document.getElementById('backButton');
+            const viewButtons = document.querySelectorAll('.view-project-btn');
+            const horoyoiDetails = document.getElementById('horoyoiDetails');
+            const translationDetails = document.getElementById('translationDetails');
+            const catteryDetails = document.getElementById('catteryDetails');
+            const neobikeDetails = document.getElementById('neobikeDetails');
+
+            // 显示项目详情
+            function showProjectDetails(projectType) {
+                gridContainer.style.opacity = '0';
+                setTimeout(() => {
+                    gridContainer.style.display = 'none';
+                    projectDetails.style.display = 'block';
+                    
+                    // 隐藏所有项目详情
+                    horoyoiDetails.style.display = 'none';
+                    translationDetails.style.display = 'none';
+                    catteryDetails.style.display = 'none';
+                    neobikeDetails.style.display = 'none';
+                    
+                    // 显示选中的项目
+                    if (projectType === 'horoyoi') {
+                        horoyoiDetails.style.display = 'block';
+                        createSakura();
+                    } else if (projectType === 'translation') {
+                        translationDetails.style.display = 'block';
+                    } else if (projectType === 'cattery') {
+                        catteryDetails.style.display = 'block';
+                    } else if (projectType === 'neobike') {
+                        neobikeDetails.style.display = 'block';
+                    }
+                    
+                    setTimeout(() => {
+                        projectDetails.style.opacity = '1';
+                    }, 50);
+                }, 300);
+            }
+
+            // 返回项目网格
+            function showProjectGrid() {
+                projectDetails.style.opacity = '0';
+                setTimeout(() => {
+                    projectDetails.style.display = 'none';
+                    gridContainer.style.display = 'block';
+                    // 清除樱花效果
+                    const sakuraBg = document.querySelector('.sakura-bg');
+                    if (sakuraBg) {
+                        sakuraBg.innerHTML = '';
+                    }
+                    setTimeout(() => {
+                        gridContainer.style.opacity = '1';
+                    }, 50);
+                }, 300);
+            }
+
+            // 绑定事件监听器
+            viewButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectItem = this.closest('.portfolio-item');
+                    const projectType = projectItem.dataset.project;
+                    showProjectDetails(projectType);
+                });
+            });
+
+            backButton.addEventListener('click', showProjectGrid);
+        });
+
+        window.addEventListener('load', createStars);
+
+        // 图片预览相关代码
+        let scale = 1;
+        const SCALE_STEP = 0.2;
+        const MAX_SCALE = 3;
+        const MIN_SCALE = 0.5;
+
+        function openImagePreview(imageSrc) {
+            const modal = document.getElementById('imagePreviewModal');
+            const previewImage = document.getElementById('previewImage');
+            previewImage.src = imageSrc;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            resetZoom();
+        }
+
+        function closeImagePreview() {
+            const modal = document.getElementById('imagePreviewModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function zoomIn() {
+            if (scale < MAX_SCALE) {
+                scale += SCALE_STEP;
+                updateZoom();
+            }
+        }
+
+        function zoomOut() {
+            if (scale > MIN_SCALE) {
+                scale -= SCALE_STEP;
+                updateZoom();
+            }
+        }
+
+        function resetZoom() {
+            scale = 1;
+            updateZoom();
+        }
+
+        function updateZoom() {
+            const previewImage = document.getElementById('previewImage');
+            previewImage.style.transform = `scale(${scale})`;
+        }
+
+        // 添加事件监听器
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... existing code ...
+
+            // 图片预览相关事件
+            document.getElementById('closePreview').addEventListener('click', closeImagePreview);
+            document.getElementById('zoomIn').addEventListener('click', zoomIn);
+            document.getElementById('zoomOut').addEventListener('click', zoomOut);
+            document.getElementById('resetZoom').addEventListener('click', resetZoom);
+
+            // 点击模态框背景关闭预览
+            document.getElementById('imagePreviewModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeImagePreview();
+                }
+            });
+
+            // 添加键盘快捷键支持
+            document.addEventListener('keydown', function(e) {
+                if (document.getElementById('imagePreviewModal').style.display === 'flex') {
+                    switch(e.key) {
+                        case 'Escape':
+                            closeImagePreview();
+                            break;
+                        case '+':
+                        case '=':
+                            zoomIn();
+                            break;
+                        case '-':
+                            zoomOut();
+                            break;
+                        case 'r':
+                            resetZoom();
+                            break;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

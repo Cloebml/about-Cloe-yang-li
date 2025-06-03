@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更多关于我 | More About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .interests-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* 添加大标题样式 */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 20px;
+            margin-top: 60px;  /* 为导航栏留出空间 */
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.8em;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #fff, #6e6e6e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: 2px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5em;
+            color: #a8a8a8;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: #999;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.6s;
+        }
+
+        .hero-description .en {
+            color: #888;
+            margin-top: 12px;
+            display: block;
+            font-size: 0.95em;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .interest-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tea-section {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+
+        .fitness-section {
+            grid-column: span 6;
+            grid-row: span 2;
+        }
+
+        .photo-section {
+            grid-column: span 12;
+            grid-row: span 2;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .tea-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tea-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .tea-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .fitness-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .fitness-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .fitness-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #a8a8a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .interest-title {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .interest-title i {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        .interest-description {
+            color: #ccc;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .interest-description .en {
+            color: #888;
+            font-style: italic;
+            margin-top: 10px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: auto;
+                min-height: 100vh;
+                margin-top: 40px;
+            }
+
+            .hero-title {
+                font-size: 2.8em;
+                margin-bottom: 30px;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3em;
+                margin-bottom: 25px;
+            }
+
+            .hero-description {
+                font-size: 1em;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tea-section, .fitness-section, .photo-section {
+                grid-column: span 1;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 星空背景 -->
+    <div class="stars"></div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-left">
+                <li>
+                    <a href="/Cloe-my-web/index.html">
+                        <span class="zh">首页</span>
+                        <span class="en">/ Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/about.html">
+                        <span class="zh">关于</span>
+                        <span class="en">/ About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/portfolio.html">
+                        <span class="zh">作品集</span>
+                        <span class="en">/ Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/more.html" class="active">
+                        <span class="zh">更多</span>
+                        <span class="en">/ More about me</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 添加大标题区域 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="zh">留白</span>
+                    <span class="en">/ Between Days</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="zh">在茶香、汗水与快门声之间，我找到了自己的节奏</span>
+                    <span class="en">/ Between the scent of tea, the rhythm of training, and the click of a shutter</span>
+                </p>
+                <p class="hero-description">
+                    <span class="zh">它们不是为了打发时间，而是让我安静、强大、也更靠近真实的自己。</span>
+                    <span class="en">These aren't just pastimes — they ground me, shape me, and bring me closer to who I really am.</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="interests-section">
+            <h1 class="section-title">
+                <span class="zh">生活剪影</span>
+                <span class="en">/ Life in Frames</span>
+            </h1>
+
+            <div class="interests-grid">
+                <!-- 茶艺部分 -->
+                <div class="interest-card tea-section">
+                    <h2 class="interest-title">
+                        <i class="fas fa-mug-hot"></i>
+                        <span class="zh">茶艺</span>
+                        <span class="en">/ Tea Appreciation</span>
+                    </h2>
+                    <div class="tea-gallery">
+                        <img src="tea1.jpg" alt="Tea ceremony" loading="lazy">
+                        <img src="tea2.jpg" alt="Tea appreciation" loading="lazy">
+                    </div>
+                    <p class="interest-description">
+                        <span class="zh">我喜欢泡茶，也喜欢看茶慢慢展开的样子。茶艺让我进入一种心流状态，人在这里不需要多说话，只需要呼吸、等待、水温刚刚好。一泡茶的时间，是我最安心的时刻。</span>
+                        <span class="en">I find peace in the quiet ritual of tea making. Watching the leaves unfold slowly puts me into a flow state — present, steady, and grounded.</span>
+                    </p>
+                </div>
+
+                <!-- 健身部分 -->
+                <div class="interest-card fitness-section">
+                    <h2 class="interest-title">
+                        <i class="fas fa-dumbbell"></i>
+                        <span class="zh">健身</span>
+                        <span class="en">/ Fitness</span>
+                    </h2>
+                    <div class="fitness-gallery">
+                        <img src="gym1.jpg" alt="Fitness training" loading="lazy">
+                        <img src="gym2.jpg" alt="Workout" loading="lazy">
+                    </div>
+                    <p class="interest-description">
+                        <span class="zh">运动是我给自己的承诺。一个强健的身体，不仅是为了好看，更是为了我能在热爱的事情上走得更远。</span>
+                        <span class="en">Fitness is my promise to myself — a foundation for doing what I love, for longer.</span>
+                    </p>
+                </div>
+
+                <!-- 摄影部分 -->
+                <div class="interest-card photo-section">
+                    <h2 class="interest-title">
+                        <i class="fas fa-camera-retro"></i>
+                        <span class="zh">摄影</span>
+                        <span class="en">/ Photography</span>
+                    </h2>
+                    <div class="photo-gallery">
+                        <img src="pho1.jpg" alt="Photography work 1" loading="lazy">
+                        <img src="pho2.jpg" alt="Photography work 2" loading="lazy">
+                        <img src="pho3.jpg" alt="Photography work 3" loading="lazy">
+                        <img src="pho4.jpg" alt="Photography work 4" loading="lazy">
+                        <img src="pho5.jpg" alt="Photography work 5" loading="lazy">
+                    </div>
+                    <p class="interest-description">
+                        <span class="zh">摄影对我来说不是技术，而是观察与共鸣的训练。我拍下生活的光线，也提醒自己去看世界里柔软的部分。</span>
+                        <span class="en">Photography teaches me to observe gently. Every shot is a quiet dialogue between me and the world.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // 创建星空背景
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            const numberOfStars = 100;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 2 + 1;
+                const duration = Math.random() * 4 + 2;
+                
+                star.style.cssText = `
+                    left: ${x}%;
+                    top: ${y}%;
+                    width: ${size}px;
+                    height: ${size}px;
+                    --duration: ${duration}s;
+                `;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // 页面加载时创建星星
+        window.addEventListener('load', createStars);
+    </script>
+</body>
+</html> 

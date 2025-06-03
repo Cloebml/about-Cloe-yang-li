@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李阳的个人主页 | Li Yang's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 星空背景 -->
+    <div class="stars"></div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-left">
+                <li>
+                    <a href="/Cloe-my-web/index.html#home" class="active">
+                        <span class="zh">首页</span>
+                        <span class="en">/ Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/about.html">
+                        <span class="zh">关于</span>
+                        <span class="en">/ About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/portfolio.html">
+                        <span class="zh">作品集</span>
+                        <span class="en">/ Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/more.html">
+                        <span class="zh">更多</span>
+                        <span class="en">/ More about me</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 首页部分 -->
+        <section id="home" class="home-section">
+            <div class="container">
+                <!-- 左侧内容 -->
+                <div class="content-wrapper">
+                    <div class="content-section">
+                        <div class="bilingual-text">
+                            <h1>
+                                <span class="zh">你好，我是李阳</span>
+                                <span class="en">/ Hello, I'm Li Yang</span>
+                            </h1>
+                            
+                            <p class="subtitle">
+                                <span class="zh">市场营销策划师 & 品牌故事讲述者</span>
+                                <span class="en">/ Marketing strategist & brand storyteller</span>
+                            </p>
+                            
+                            <p class="tagline">
+                                <span class="zh">帮助品牌讲述更好的故事</span>
+                                <span class="en">/ I help brands tell better stories</span>
+                            </p>
+                        </div>
+                        
+                        <a href="mailto:ruirui@example.com" class="cta-button">
+                            <span class="zh">联系我</span>
+                            <span class="en">/ GET IN TOUCH</span>
+                        </a>
+                        
+                        <!-- 社交媒体图标 -->
+                        <div class="social-icons">
+                            <a href="javascript:void(0)" id="tiktokCopy" class="tiktok-copy" data-tiktok="526chloe">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="javascript:void(0)" id="emailCopy" class="email-copy" data-email="2267232523@qq.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="javascript:void(0)" id="phoneCopy" class="phone-copy" data-phone="+86 17717187731">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="javascript:void(0)" id="wechatCopy" class="wechat-copy" data-wechat="cloebml">
+                                <i class="fab fa-weixin"></i>
+                            </a>
+                        </div>
+
+                        <!-- 复制成功提示 -->
+                        <div class="copy-tooltip" id="copyTooltip">
+                            <span class="zh">已复制到剪贴板！</span>
+                            <span class="en">Copied to clipboard!</span>
+                            <span class="copy-content" id="copyContent"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 右侧内容 -->
+                <div class="right-content">
+                    <div class="profile-image">
+                        <img src="profile.JPG" alt="李阳的照片 / Li Yang's photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // 创建星空背景
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            const numberOfStars = 100;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 2 + 1;
+                const duration = Math.random() * 4 + 2;
+                
+                star.style.cssText = `
+                    left: ${x}%;
+                    top: ${y}%;
+                    width: ${size}px;
+                    height: ${size}px;
+                    --duration: ${duration}s;
+                `;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // 页面加载时创建星星
+        window.addEventListener('load', createStars);
+
+        // 导航链接平滑滚动
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                // 只处理页内锚点链接
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetSection = document.getElementById(href.substring(1));
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // 复制功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailCopy = document.getElementById('emailCopy');
+            const wechatCopy = document.getElementById('wechatCopy');
+            const tiktokCopy = document.getElementById('tiktokCopy');
+            const phoneCopy = document.getElementById('phoneCopy');
+            const copyTooltip = document.getElementById('copyTooltip');
+            const copyContent = document.getElementById('copyContent');
+            
+            function copyToClipboard(text, type) {
+                const tempInput = document.createElement('input');
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                let typeText = '';
+                switch(type) {
+                    case 'email':
+                        typeText = '邮箱：';
+                        break;
+                    case 'wechat':
+                        typeText = '微信：';
+                        break;
+                    case 'tiktok':
+                        typeText = '抖音号：';
+                        break;
+                    case 'phone':
+                        typeText = '电话：';
+                        break;
+                }
+                copyContent.textContent = typeText + text;
+                
+                copyTooltip.style.opacity = '1';
+                copyTooltip.style.transform = 'translateY(0)';
+                
+                setTimeout(() => {
+                    copyTooltip.style.opacity = '0';
+                    copyTooltip.style.transform = 'translateY(-10px)';
+                }, 3000);
+            }
+            
+            emailCopy.addEventListener('click', function() {
+                const email = this.getAttribute('data-email');
+                copyToClipboard(email, 'email');
+            });
+            
+            wechatCopy.addEventListener('click', function() {
+                const wechat = this.getAttribute('data-wechat');
+                copyToClipboard(wechat, 'wechat');
+            });
+
+            tiktokCopy.addEventListener('click', function() {
+                const tiktok = this.getAttribute('data-tiktok');
+                copyToClipboard(tiktok, 'tiktok');
+            });
+
+            phoneCopy.addEventListener('click', function() {
+                const phone = this.getAttribute('data-phone');
+                copyToClipboard(phone, 'phone');
+            });
+        });
+    </script>
+</body>
+</html> 

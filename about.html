@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 | About Me - 李阳的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 星空背景 -->
+    <div class="stars"></div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-left">
+                <li>
+                    <a href="/Cloe-my-web/index.html">
+                        <span class="zh">首页</span>
+                        <span class="en">/ Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/about.html" class="active">
+                        <span class="zh">关于</span>
+                        <span class="en">/ About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/portfolio.html">
+                        <span class="zh">作品集</span>
+                        <span class="en">/ Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cloe-my-web/more.html">
+                        <span class="zh">更多</span>
+                        <span class="en">/ More about me</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="container about-container">
+            <div class="about-content">
+                <h1 class="about-title">
+                    <span class="zh">关于我</span>
+                    <span class="en">/ About Me</span>
+                </h1>
+
+                <div class="about-text">
+                    <div class="text-block">
+                        <p class="zh">你好，我是李阳，一个喜欢在创意、策略与文化之间搭建桥梁的人。</p>
+                        <p class="en">Hi, I'm Yang — someone who thrives at the intersection of creativity, strategy, and cultural insight.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">我的学习与工作经历横跨新闻、翻译与市场营销领域，一直对有深度、有温度的表达方式充满热情。</p>
+                        <p class="en">With a background spanning journalism, translation, and marketing, I've always been drawn to the power of meaningful communication.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">跨文化的成长与实践让我拥有敏锐的洞察力与对差异的尊重，能够在不同观点与受众之间找到共鸣点。</p>
+                        <p class="en">My experiences across continents have shaped a sharp eye for detail and a deep respect for cultural nuance, helping me build bridges between ideas, people, and platforms.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">我拥有昆士兰大学的新闻与口译双学士学位，以及墨尔本大学的管理学硕士（市场营销方向）。跨学科的训练使我在语言表达与战略思维方面具备扎实基础，也培养了我对品牌沟通更深层次的理解。</p>
+                        <p class="en">I hold a dual bachelor's degree in Journalism and Interpreting from the University of Queensland, and a Master of Management (Marketing) from the University of Melbourne. This cross-disciplinary background has given me a strong foundation in communication, with a focus on strategy, language, and brand expression.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">我擅长将复杂的信息转化为有逻辑、有感染力的内容——不论是打造品牌语言，挖掘用户动机，还是将创意转化为可视化呈现。</p>
+                        <p class="en">I love turning complex insights into compelling narratives—whether it's shaping a brand's voice, exploring consumer motivations, or translating ideas into visuals.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">我的思维方式融合了理性与直觉，既有逻辑支撑，也始终保持对未知的好奇和对意义的追求。</p>
+                        <p class="en">My approach blends analytical thinking with intuitive understanding, driven by curiosity and grounded in purpose.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">在生活中，我重视清晰的沟通、真诚的协作与温和有力的态度。</p>
+                        <p class="en">Off the screen, I'm someone who values clarity, collaboration, and kindness.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">我喜欢动植物、喜欢用双手做些温柔的东西，也喜欢讲故事。在快节奏之外，我更享受慢下来认真做一件小事的过程。</p>
+                        <p class="en">I love animals and plants, crafting by hand, and telling stories. I often slow down to think, and I enjoy immersing myself in one thing at a time.</p>
+                    </div>
+
+                    <div class="text-block">
+                        <p class="zh">我相信，真诚是人与人之间最好的起点，而持续学习与创造，是我通往世界的方式。</p>
+                        <p class="en">I believe that honesty is the start of all connection, and that learning and creating are the ways I choose to engage with the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript for stars -->
+    <script>
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            const numberOfStars = 100;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const size = Math.random() * 2 + 1;
+                const duration = Math.random() * 4 + 2;
+                
+                star.style.cssText = `
+                    left: ${x}%;
+                    top: ${y}%;
+                    width: ${size}px;
+                    height: ${size}px;
+                    --duration: ${duration}s;
+                `;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+
+        window.addEventListener('load', createStars);
+    </script>
+</body>
+</html> 
