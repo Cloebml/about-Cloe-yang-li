@@ -2057,4 +2057,212 @@ nav a.active:hover {
     .back-to-grid i {
         font-size: 1em;
     }
+}
+
+/* 移动端响应式样式 */
+@media screen and (max-width: 768px) {
+    /* 导航栏样式 */
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-left li {
+        margin: 8px 0;
+    }
+
+    /* 主要内容区域样式 */
+    .container {
+        padding: 20px;
+    }
+
+    /* 首页样式调整 */
+    .content-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .right-content {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    /* 关于页面样式 */
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    /* 作品集页面样式 */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .portfolio-item {
+        margin-bottom: 20px;
+    }
+
+    .project-details .container {
+        padding: 20px;
+    }
+
+    .quick-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    .contribution-timeline {
+        padding: 20px;
+    }
+
+    /* 更多页面样式 */
+    .interests-section {
+        padding: 40px 20px;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tea-section,
+    .fitness-section,
+    .photo-section {
+        grid-column: span 1;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .photo-gallery img,
+    .tea-gallery img,
+    .fitness-gallery img {
+        height: 150px;
+    }
+
+    /* 通用文字样式调整 */
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* 社交图标调整 */
+    .social-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 复制提示调整 */
+    .copy-tooltip {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+/* 小屏幕手机适配 */
+@media screen and (max-width: 480px) {
+    .nav-left li a {
+        font-size: 14px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .photo-gallery,
+    .tea-gallery,
+    .fitness-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-gallery img,
+    .tea-gallery img,
+    .fitness-gallery img {
+        height: 200px;
+    }
+
+    .quick-stats {
+        padding: 10px;
+    }
+
+    .stat-item {
+        padding: 10px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+}
+
+/* 暗色主题优化 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+    }
+
+    .nav-container {
+        background-color: rgba(18, 18, 18, 0.9);
+    }
+
+    .content-card,
+    .interest-card {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* 优化动画性能 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 } 
